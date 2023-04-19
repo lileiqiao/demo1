@@ -9,3 +9,4 @@ export const getTypeOne = () => get("/home");  //index top 导航栏
 export const lbt = () => get("/");    //轮播图
 export const indexshangpinlist = (params) => get("/floorList",params);   //idnex 商品  触底加载 
 export const xiangqing = (params) => get("/products",params);  //详情
+export const pinlun = (params) => get("/getCommentList",params);   //评论

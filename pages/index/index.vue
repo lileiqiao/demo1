@@ -136,9 +136,9 @@
 				});
 			},
 			xq(i){
-				console.log(i.routerParams.suId);
+				console.log(i);
 				uni.navigateTo({
-					url: '../xq/xq?id='+i.routerParams.suId
+					url: '../xq/xq?id='+i.routerParams.suId+"&idd="+i.id
 				});
 			}
 		}
