@@ -1,6 +1,8 @@
 <template>
 	<view class="box">
-		<view class="search-input-container"><view class="search-input"></view></view>
+		<view class="search-input-container">
+			<view class="search-input" @click="toSearch">搜索</view>
+		</view>
 		<view class="content">
 			<view class="left">
 				<scroll-view scroll-y class="left_scroll">
@@ -18,7 +20,7 @@
 				<scroll-view scroll-y="true" class="right_scroll" v-if="list.length">
 					<view class="right_tit">{{ list[0].categoryName }}</view>
 					<view v-for="(it, i) in contlist" class="right_item">
-						<view class="right_item_tit" @click="tolist(i, 0)">
+						<view class="right_item_tit" @click="tolist(active, i, -1)">
 							{{ it.categoryName }}
 							<text style="float: right; margin-right: 30rpx;">></text>
 						</view>
@@ -26,7 +28,7 @@
 							<view
 								class="right_item_con_it"
 								v-for="(con, n) in it.subCategoryList"
-								@click="tolist(i, n)"
+								@click="tolist(active, i, n)"
 							>
 								<image
 									:src="con.imageUrl"
@@ -71,11 +73,16 @@ export default {
 			this.active = i;
 			this.contlist = this.list[i].subCategoryList;
 		},
-		tolist(i, n) {
-			console.log(i, n);
+		tolist(x, i, n) {
+			// console.log(i, n);
 			uni.navigateTo({
-				url:`/pages/classList/classList?one=${i}&two=${n}`
-			})
+				url: `/pages/classList/classList?i=${x}&one=${i}&two=${n}`
+			});
+		},
+		toSearch() {
+			uni.navigateTo({
+				url: '/pages/search/search'
+			});
 		}
 	}
 };
