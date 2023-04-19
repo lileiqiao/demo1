@@ -17,6 +17,12 @@
 			"style": {
 				// "navigationBarTitleText": "分类",
 			}
+		},
+		{
+			"path": "pages/xq/xq",
+			"style": {
+				// "navigationBarTitleText": "分类",
+			}
 		}
 	    ,{
             "path" : "pages/classList/classList",
