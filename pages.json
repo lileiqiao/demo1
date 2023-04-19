@@ -18,7 +18,16 @@
 				// "navigationBarTitleText": "分类",
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/classList/classList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "必要商城",
