@@ -1,6 +1,6 @@
 <template>
-	<view class="">
-		1111
+	<view class="box">
+		<input type="text" placeholder="搜索商品">
 	</view>
 </template>
 
@@ -9,7 +9,7 @@
 	export default {
 		data() {
 			return {
-
+			 val:''
 			}
 		},
 		onLoad() {
@@ -18,15 +18,11 @@
 			})
 		},
 		methods: {
+			onSearch(){
+			}
 		}
 	}
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
 </style>

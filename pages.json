@@ -51,5 +51,16 @@
 		}
 		]
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+		"easycom": {
+			"autoscan": true,
+			"custom": {
+	            // 1.1.0 版本前:
+	            // "cl-(.*)": "cl-uni/components/$1/$1.vue"
+				
+	
+	            // 1.1.0 版本后:
+	            "cl-(.*)": "cl-uni/components/cl-$1/cl-$1.vue"
+			}
+		}
 }
